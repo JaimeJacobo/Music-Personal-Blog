@@ -37,16 +37,12 @@
         </div>
         <div class="modal-body">
           <a href="https://www.nuclearblast.de/static/articles/275/275238.jpg/1000x1000.jpg" target="_blank"><img src="Avantasia-Moonglow.jpg" class="details-modal__image" alt="Avantasia - Moonglow"></a>
-          <p>Álbum: Moonglow</p>
-          <p>Grupo/Artista: Avantasia</p>
-          <p>Año: 2019</p>
-          <p>Género: Heavy Metal</p>
-          <p>Subgénero: Symphonic Power Metal</p>
-          <p>Playlist:</p>
-          <div class="details-modal__spotify-playlist">
-            <iframe src="https://open.spotify.com/embed/album/5p7e20MF6t7Z915ESKsjPq" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-          </div>
-          
+          <p>Álbum: <span id="details-modal__album"></span></p>
+          <p>Grupo/Artista: <span id="details-modal__artist"></span></p>
+          <p>Año: <span id="details-modal__year"></span></p>
+          <p>Género: <span id="details-modal__genre"></span></p>
+          <p>Subgénero: <span id="details-modal__subgenre"></span></p>
+          <p>Playlist:</p> <div id="details-modal__spotifyPlaylist" class="details-modal__spotify-playlist"></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
