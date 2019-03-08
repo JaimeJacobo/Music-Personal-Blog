@@ -6,3 +6,8 @@
 $("#Avantasia-Moonglow").on('hidden.bs.modal', ()=> {
     $("#Avantasia-Moonglow iframe").attr("src", $("#Avantasia-Moonglow iframe").attr("src"));
 });
+
+
+$("#modalButton").click( ()=> {
+    let name = $("");
+  });
