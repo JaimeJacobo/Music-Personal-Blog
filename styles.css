@@ -1,0 +1,74 @@
+
+
+
+/* Variables */
+:root {
+  --main-color: rgb(19,33,37);
+  --secondary-color: rgb(184, 189, 186);
+  --red: rgb(255,0,0);
+
+}
+/* END Variables */
+/* Fonts */
+@font-face {font-family: Lora-Regular; src: url('fonts/Lora-Regular.ttf');}
+@font-face {font-family: Lora-Bold; src: url('fonts/Lora-Bold.ttf');}
+@font-face {font-family: Lora-Italic; src: url('fonts/Lora-Italic.ttf');}
+@font-face {font-family: Lora-Bold-Italic; src: url('fonts/Lora-BoldItalic.ttf');}
+/* END Fonts */
+.header {
+  background-color: rgb(19,33,37);
+  height: 20em;
+}
+
+.header-image {
+  width: 30em;
+  height: 20em;  
+  background: 
+    linear-gradient(to right, rgba(255, 255, 255, 0) 60%, var(--main-color)),
+    url(niels-smeets-448642-unsplash.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-title {
+  position: absolute;
+  width: 100%;
+  font-family: 'Lora-Regular';
+  color: var(--secondary-color);
+  text-align: center;
+  margin-left: 8em;
+}
+
+.header-title h1 {
+  font-size: 4em;
+  margin-bottom: 0;
+}
+
+/* Album Details Modal */
+
+.details-modal__image {
+  width: 100%;
+  border: 5px solid black;
+}
+
+
+
+/* END Album Details Modal */
+
+
+/* Common Classes */
+
+.flex-spaceBetween-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* END Common Classes */
+
+
+.details-modal__spotify-playlist iframe{
+  width: 100%;
+  border: 5px solid black;
+  border-radius: 3px;
+}
