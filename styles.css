@@ -22,7 +22,7 @@
 body {
   font-family: 'Karla-Regular';
 }
-
+/* Header */
 .header {
   background-color: rgb(19,33,37);
   height: 20em;
@@ -51,7 +51,36 @@ body {
   font-size: 4em;
   margin-bottom: 0;
 }
+/* END Header */
+/* Top 5 Weekly Ranking */
+.weekly-top-ranking__title {
+  text-align: center;
+    font-size: 4em;
+}
 
+.weekly-top-ranking__image img{
+  width: 30em;
+  border: 5px black solid;
+}
+
+.weekly-top-ranking__text-content {
+  max-width: 30em;
+  margin: 1em;
+  text-align: justify;
+}
+
+.weekly-top-ranking__details-button-and-iframe {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1.4em 12.4em;
+}
+
+.weekly-top-ranking__details-button-and-iframe iframe {
+  border: 1px black solid;
+  border-radius: 3px;
+}
+/* END Top 5 Weekly Ranking */
 /* Album Details Modal */
 
 .details-modal__image {
@@ -59,7 +88,11 @@ body {
   border: 5px solid black;
 }
 
-
+.details-modal__spotify-playlist iframe{
+  width: 100%;
+  border: 5px solid black;
+  border-radius: 3px;
+}
 
 /* END Album Details Modal */
 
@@ -72,11 +105,14 @@ body {
   align-items: center;
 }
 
-/* END Common Classes */
-
-
-.details-modal__spotify-playlist iframe{
-  width: 100%;
-  border: 5px solid black;
-  border-radius: 3px;
+.flex-centered-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.text-align-center {
+  text-align: center;
+}
+
+/* END Common Classes */

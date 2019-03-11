@@ -15,25 +15,50 @@
       <!----Here goes the image of the header as a background-->
     </div>
     <div class="header-title">
-      <h1>Personal Music Blog</h1>
+      <!-- <h1>Personal Music Blog</h1> -->
     </div>
   </div>
   <!-- END Header -->
 
-  <!-- Button to open the details of the Avantasia - Moonglow album -->
-  <button type="button" id="Avantasia-Moonglow" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
-    Avantasia - Moonglow
-  </button>
+  <!-- Weekly Top 5 Ranking -->
+  <div class="weekly-top-ranking">
+    <p class="weekly-top-ranking__title">Lore Ipsum</p>
+    <div class="weekly-top-ranking__image flex-centered-centered">
+      <img src="Avantasia-Moonglow.jpg" alt="">
+    </div>
+    <!-- Content of the button of details and the Spotify iframe -->
+    <div class="weekly-top-ranking__details-button-and-iframe">
+      <!-- Button to open the details of the Avantasia - Moonglow album -->
+    <div class="text-align-center">
+      <button type="button" id="Avantasia-Moonglow" class="btn btn-info" data-toggle="modal" data-target="#details-modal">
+      Detalles del álbum
+      </button>
+    </div>
+     <!-- END Button to open the details of the Avantasia - Moonglow album -->
+     <!-- The chosen song -->
+     <div class="text-align-center">
+      <iframe src="https://open.spotify.com/embed/track/2jqbftCPkFZw6SVVm1DXLe" width="300" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+     </div>
+     <!-- END The chosen song -->
+    </div>
+    <!-- END Content of the button of details and the Spotify iframe -->
+    
+    <div class="flex-centered-centered">
+      <p class="weekly-top-ranking__text-content">No sé cómo Tobias Sammet puede, una vez más, hacer un disco así. No me cabe en la cabeza pensar que una persona es capaz de sacar de su propia mano canciones tan épicas como las de este disco. Auqnue haya salido hace tan solo unas semanas, puedo afirmar rotundamente que es uno de los mejores discos de Metal que he escuchado en mi vida. Como bien dijo un amigo mío, este disco es la obra de Avantasia que el mundo del metal actual, y la música necesitaban. Legendario.</p>
+    </div>
+  </div>
+  <!-- END Weekly Top 5 Ranking -->
+
 
   <!-- Button to open the details of the Mago de Oz - Ira Dei album -->
-  <button type="button" id="MagoDeOz-IraDei" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
+  <!-- <button type="button" id="MagoDeOz-IraDei" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
     Mago de Oz - Ira Dei
-  </button>
+  </button> -->
 
   <!-- Button to open the details of the Modo Avion - Modo Avion album -->
-  <button type="button" id="ModoAvion-ModoAvion" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
+  <!-- <button type="button" id="ModoAvion-ModoAvion" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
     Modo Avion - Modo Avion
-  </button>
+  </button> -->
   
   <!-- Modal -->
   <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
