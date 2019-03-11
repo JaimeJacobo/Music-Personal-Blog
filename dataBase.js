@@ -13,7 +13,7 @@ let dataBase = {
       subgenre: 'Symphonic Power Metal',
       spotifyPlaylist: '<iframe src="https://open.spotify.com/embed/album/5p7e20MF6t7Z915ESKsjPq" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
       totalSongs: 12,
-      totalDuration: '1hr 10min'
+      totalDuration: '1hr 10min',
     }
   },
   MagoDeOz: {
@@ -27,7 +27,7 @@ let dataBase = {
       subgenre: 'Folk Metal, Symphonic Power Metal',
       spotifyPlaylist: '<iframe src="https://open.spotify.com/embed/album/4qGd0EhR3ZRasfhnk9regn" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
       totalSongs: 18,
-      totalDuration: '1hr 35min'
+      totalDuration: '1hr 35min',
     }
   },
   ModoAvion: {
@@ -43,5 +43,5 @@ let dataBase = {
       totalSongs: 10,
       year: 2018,
     }
-  }
+  },
 };
