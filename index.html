@@ -20,13 +20,18 @@
 </div>
 <!-- END Header -->
 
-<!-- Button trigger modal -->
-<button type="button" id="modalButton" class="btn btn-primary" data-toggle="modal" data-target="#Avantasia-Moonglow">
-    Launch demo modal
+<!-- Button to open the details of the Avantasia - Moonglow album -->
+  <button type="button" id="Avantasia-Moonglow" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
+    Avantasia - Moonglow
+  </button>
+
+  <!-- Button to open the details of the Mago de Oz - Ira Dei album -->
+  <button type="button" id="MagoDeOz-IraDei" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
+    Mago de Oz - Ira Dei
   </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="Avantasia-Moonglow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -36,7 +41,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <a href="https://www.nuclearblast.de/static/articles/275/275238.jpg/1000x1000.jpg" target="_blank"><img src="Avantasia-Moonglow.jpg" class="details-modal__image" alt="Avantasia - Moonglow"></a>
+          <a id="details-modal__album-cover" href="" target="_blank"></a>
           <p>Álbum: <span id="details-modal__album"></span></p>
           <p>Grupo/Artista: <span id="details-modal__artist"></span></p>
           <p>Año: <span id="details-modal__year"></span></p>
