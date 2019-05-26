@@ -55,7 +55,7 @@ $(document).ready(function(){
       });
    };
 
-   //Instruction to stop the music from the Avantasia - Moonglow album
+   //Instruction to stop the music when the modal is closed
    $("#prueba2").on('hidden.bs.modal', ()=> {
       $("#prueba2 iframe").attr("src", $("#prueba2 iframe").attr("src"));
    });
@@ -72,17 +72,17 @@ $(document).ready(function(){
       $('.all-albums-content').hide();
    });
 
+   $('#Avantasia-Moonglow-button').click(()=>{
+      event.target.id = 8;
+      $('#8').click();
+   });
 
-   setTimeout(()=>{
+
+   setTimeout(()=>{ 
    $('.each-album-button').click(()=>{
-      console.log('jaime')
       cleanModal();
       getModalInfo(event.target.id);
    });
-
-      $('#4').click(()=>{
-         console.log('jaime')
-      })
    }, 10);
 
 
