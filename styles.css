@@ -1,39 +1,62 @@
-
-
-
 /* Variables */
 :root {
   --main-color: rgb(19,33,37);
   --secondary-color: rgb(184, 189, 186);
   --red: rgb(255,0,0);
-
 }
+
 /* END Variables */
-
 /* Fonts */
-@font-face {font-family: Lora-Regular; src: url('fonts/Lora-Regular.ttf');}
-@font-face {font-family: Lora-Bold; src: url('fonts/Lora-Bold.ttf');}
-@font-face {font-family: Lora-Italic; src: url('fonts/Lora-Italic.ttf');}
-@font-face {font-family: Lora-Bold-Italic; src: url('fonts/Lora-BoldItalic.ttf');}
-@font-face {font-family: Karla-Regular; src: url('fonts/Karla-Regular.ttf');}
-@font-face {font-family: Karla-Bold; src: url('fonts/Karla-Bold.ttf');}
-/* END Fonts */
+@font-face {
+  font-family: Lora-Regular;
+  src: url("fonts/Lora-Regular.ttf");
+}
 
+@font-face {
+  font-family: Lora-Bold;
+  src: url("fonts/Lora-Bold.ttf");
+}
+
+@font-face {
+  font-family: Lora-Italic;
+  src: url("fonts/Lora-Italic.ttf");
+}
+
+@font-face {
+  font-family: Lora-Bold-Italic;
+  src: url("fonts/Lora-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: Karla-Regular;
+  src: url("fonts/Karla-Regular.ttf");
+}
+
+@font-face {
+  font-family: Karla-Bold;
+  src: url("fonts/Karla-Bold.ttf");
+}
+
+/* END Fonts */
 body {
   font-family: 'Karla-Regular';
+  background-color: var(--main-color);
 }
-/* Header */
+
+p {
+  margin-top: 1em;
+}
+
 .header {
-  background-color: rgb(19,33,37);
+  background-color: #132125;
   height: 20em;
 }
 
 .header-image {
   width: 30em;
-  height: 20em;  
-  background: 
-    linear-gradient(to right, rgba(255, 255, 255, 0) 60%, var(--main-color)),
-    url(niels-smeets-448642-unsplash.jpg);
+  height: 20em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, rgba(255, 255, 255, 0)), to(var(--main-color))), url(niels-smeets-448642-unsplash.jpg);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 60%, var(--main-color)), url(niels-smeets-448642-unsplash.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -51,14 +74,17 @@ body {
   font-size: 4em;
   margin-bottom: 0;
 }
-/* END Header */
-/* Top 5 Weekly Ranking */
-.weekly-top-ranking__title {
-  text-align: center;
-    font-size: 4em;
+
+.weekly-top-ranking {
+  display: block;
 }
 
-.weekly-top-ranking__image img{
+.weekly-top-ranking__title {
+  text-align: center;
+  font-size: 4em;
+}
+
+.weekly-top-ranking__image img {
   width: 30em;
   border: 5px black solid;
 }
@@ -70,45 +96,56 @@ body {
 }
 
 .weekly-top-ranking__details-button-and-iframe {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 1.4em 12.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 1.4em 12.4em;
 }
 
 .weekly-top-ranking__details-button-and-iframe iframe {
   border: 1px black solid;
   border-radius: 3px;
 }
-/* END Top 5 Weekly Ranking */
-/* Album Details Modal */
 
 .details-modal__image {
   width: 100%;
   border: 5px solid black;
 }
 
-.details-modal__spotify-playlist iframe{
+.details-modal__spotify-playlist iframe {
   width: 100%;
   border: 5px solid black;
   border-radius: 3px;
 }
 
-/* END Album Details Modal */
-
-
 /* Common Classes */
-
 .flex-spaceBetween-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-centered-centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .text-align-center {
@@ -116,3 +153,27 @@ body {
 }
 
 /* END Common Classes */
+/* SEARCHER PRUEBAS  */
+#prueba img {
+  width: 100px;
+  margin: 0.5em;
+  border: solid 1px black;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#prueba img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.all-albums-content {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--main-color)), to(yellow));
+  background-image: linear-gradient(var(--main-color) 50%, yellow);
+}
+
+#1 {
+  width: 50000px;
+}
+/*# sourceMappingURL=styles.css.map */

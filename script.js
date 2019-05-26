@@ -1,44 +1,100 @@
 
+$(document).ready(function(){
 
-// This instructions are for making the music from inside the details-modal to stop when the modal is closed
+   $('.weekly-top-ranking').hide();
+   
+   $.ajaxSetup({ cache: false });
 
-//Instruction to stop the music from the Avantasia - Moonglow album
-$("#Avantasia-Moonglow").on('hidden.bs.modal', ()=> {
-  $("#Avantasia-Moonglow iframe").attr("src", $("#Avantasia-Moonglow iframe").attr("src"));
+   $.getJSON('data.json', function(data) {
+      $.each(data, (key, value)=>{
+         $('#prueba').append($('<button type="button" id="'+ value.position +'" class="each-album-button" data-toggle="modal" data-target="#details-modal"><img id="'+ value.position +'" src="'+ value.albumCover +'" alt="'+ value.imageAlt +'"></button>'));
+      });
+   });
+
+   $('#search').keyup(()=>{
+      $('#prueba').html('');
+         setTimeout(()=>{
+            $('.each-album-button').click(()=>{
+               cleanModal();
+               getModalInfo(event.target.id);
+            });
+         }, 10);
+      // $('#state').val('');
+      let searchField = $('#search').val();
+      let expression = new RegExp(searchField, "i");
+      $.getJSON('data.json', (data)=>{
+         $.each(data, (key, value)=>{
+            if (value.artist.search(expression) != -1 || value.album.search(expression) != -1){
+               $('#prueba').append($('<button type="button" id="'+ value.position +'" class="each-album-button" data-toggle="modal" data-target="#details-modal"><img id="'+ value.position +'" src="'+ value.albumCover +'" alt="'+ value.imageAlt +'"></button>'));
+            };
+         });
+      });
+   });
+
+   let cleanModal = ()=> {
+      $('#details-modal__complete-name').html('');
+      $('#details-modal__album').html('');
+      $('#details-modal__artist').html('');
+      $('#details-modal__year').html('');
+      $('#details-modal__genre').html('');
+      $('#details-modal__subgenre').html('');
+      $('#details-modal__spotifyPlaylist').html('');
+   };
+
+   let getModalInfo = (position)=>{
+      $.getJSON('data.json', (data)=>{
+         $('#details-modal__complete-name').append(data[position].imageAlt);
+         $('#details-modal__album-cover').attr('href', data[position].albumLink);
+         $('#details-modal__album-cover-image').attr('src', data[position].albumLink);
+         $('#details-modal__album').append(data[position].album);
+         $('#details-modal__artist').append(data[position].artist);
+         $('#details-modal__year').append(data[position].year);
+         $('#details-modal__genre').append(data[position].genre);
+         $('#details-modal__subgenre').append(data[position].subgenre);
+         $('#details-modal__spotifyPlaylist').append(data[position].spotifyPlaylist);
+      });
+   };
+
+   //Instruction to stop the music from the Avantasia - Moonglow album
+   $("#prueba2").on('hidden.bs.modal', ()=> {
+      $("#prueba2 iframe").attr("src", $("#prueba2 iframe").attr("src"));
+   });
+
+   // This is to show the 'All Albums Content' on the main page
+   $('#all-albums-button').click(()=>{
+      $('.all-albums-content').show();
+      $('.weekly-top-ranking').hide();
+   });
+ 
+   // This is to show the 'Top Weekly Ranking' on the main page
+   $('#weekly-top-ranking-button').click(()=>{
+      $('.weekly-top-ranking').show();
+      $('.all-albums-content').hide();
+   });
+
+
+   setTimeout(()=>{
+   $('.each-album-button').click(()=>{
+      console.log('jaime')
+      cleanModal();
+      getModalInfo(event.target.id);
+   });
+
+      $('#4').click(()=>{
+         console.log('jaime')
+      })
+   }, 10);
+
+
+   
 });
 
 
-$("#Avantasia-Moonglow").click( ()=> {
-  $("#details-modal__album-cover").attr('href', dataBase.Avantasia.Moonglow.albumLink);
-  $("#details-modal__album-cover").html(dataBase.Avantasia.Moonglow.albumCover);
-  $("#details-modal__album").html(dataBase.Avantasia.Moonglow.album);
-  $("#details-modal__artist").html(dataBase.Avantasia.Moonglow.artist);
-  $("#details-modal__year").html(dataBase.Avantasia.Moonglow.year);
-  $("#details-modal__genre").html(dataBase.Avantasia.Moonglow.genre);
-  $("#details-modal__subgenre").html(dataBase.Avantasia.Moonglow.subgenre);
-  $("#details-modal__spotifyPlaylist").html(dataBase.Avantasia.Moonglow.spotifyPlaylist);
-});
+
+   
+
+   
 
 
-$("#MagoDeOz-IraDei").click( ()=> {
-  $("#details-modal__album-cover").attr('href', dataBase.MagoDeOz.IraDei.albumLink);
-  $("#details-modal__album-cover").html(dataBase.MagoDeOz.IraDei.albumCover);
-  $("#details-modal__album").html(dataBase.MagoDeOz.IraDei.album);
-  $("#details-modal__artist").html(dataBase.MagoDeOz.IraDei.artist);
-  $("#details-modal__year").html(dataBase.MagoDeOz.IraDei.year);
-  $("#details-modal__genre").html(dataBase.MagoDeOz.IraDei.genre);
-  $("#details-modal__subgenre").html(dataBase.MagoDeOz.IraDei.subgenre);
-  $("#details-modal__spotifyPlaylist").html(dataBase.MagoDeOz.IraDei.spotifyPlaylist);
-});
 
-
-$("#ModoAvion-ModoAvion").click( ()=> {
-  $("#details-modal__album-cover").attr('href', dataBase.ModoAvion.ModoAvion.albumLink);
-  $("#details-modal__album-cover").html(dataBase.ModoAvion.ModoAvion.albumCover);
-  $("#details-modal__album").html(dataBase.ModoAvion.ModoAvion.album);
-  $("#details-modal__artist").html(dataBase.ModoAvion.ModoAvion.artist);
-  $("#details-modal__year").html(dataBase.ModoAvion.ModoAvion.year);
-  $("#details-modal__genre").html(dataBase.ModoAvion.ModoAvion.genre);
-  $("#details-modal__subgenre").html(dataBase.ModoAvion.ModoAvion.subgenre);
-  $("#details-modal__spotifyPlaylist").html(dataBase.ModoAvion.ModoAvion.spotifyPlaylist);
-});
+      

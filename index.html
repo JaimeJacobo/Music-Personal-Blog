@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="wickedcss.css">
   <link rel="stylesheet" href="styles.css">
   <title>Document</title>
 </head>
 <body>
-  <!-- STARTS Header -->
+
+  <!-- Header -->
   <div class="header flex-spaceBetween-center">
     <div class="header-image">
       <!----Here goes the image of the header as a background-->
@@ -20,11 +22,34 @@
   </div>
   <!-- END Header -->
 
+  <!-- Menu -->
+  <div class="menu">
+    <!-- Button to open 'All Albums Content' -->
+    <button type="button" id="all-albums-button" class="btn btn-primary">
+      Todos los álbumes
+    </button>
+
+    <!-- Button to open 'Weekly Top 5 Ranking' -->
+    <button type="button" id="weekly-top-ranking-button" class="btn btn-primary">
+      Top 5 Ranking Semanal
+    </button>
+  </div>
+  <!-- END Menu -->
+  <!-- All Albums Content -->
+  <div class="all-albums-content">
+    <div class="container">
+      <div align="center">
+        <input type="text" name="search" id="search" placeholder="Search For Album or Artist" class="form-control" />
+      </div>
+        <span id="prueba"><!--Here goes all the albums images--></span> 
+    </div>
+  </div>
+  <!-- END All Albums Content -->
   <!-- Weekly Top 5 Ranking -->
   <div class="weekly-top-ranking">
     <p class="weekly-top-ranking__title">Lore Ipsum</p>
     <div class="weekly-top-ranking__image flex-centered-centered">
-      <img src="Avantasia-Moonglow.jpg" alt="">
+      <img src="Avantasia-Moonglow.jpg" alt="Avantasia - Moonglow">
     </div>
     <!-- Content of the button of details and the Spotify iframe -->
     <div class="weekly-top-ranking__details-button-and-iframe">
@@ -50,50 +75,38 @@
   <!-- END Weekly Top 5 Ranking -->
 
 
-  <!-- Button to open the details of the Mago de Oz - Ira Dei album -->
-  <!-- <button type="button" id="MagoDeOz-IraDei" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
-    Mago de Oz - Ira Dei
-  </button> -->
-
-  <!-- Button to open the details of the Modo Avion - Modo Avion album -->
-  <!-- <button type="button" id="ModoAvion-ModoAvion" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
-    Modo Avion - Modo Avion
-  </button> -->
-  
-  <!-- Modal -->
-  <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Avantasia - Moonglow</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <a id="details-modal__album-cover" href="" target="_blank"></a>
-          <p>Álbum: <span id="details-modal__album"></span></p>
-          <p>Grupo/Artista: <span id="details-modal__artist"></span></p>
-          <p>Año: <span id="details-modal__year"></span></p>
-          <p>Género: <span id="details-modal__genre"></span></p>
-          <p>Subgénero: <span id="details-modal__subgenre"></span></p>
-          <p>Playlist:</p> <div id="details-modal__spotifyPlaylist" class="details-modal__spotify-playlist"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
+    <!-- Modal -->
+    <div id="prueba2">
+      <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="details-modal__complete-name" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="details-modal__complete-name"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <a id="details-modal__album-cover" href="" target="_blank"><img src="https://images-na.ssl-images-amazon.com/images/I/61kcW9DpqCL._SL1425_.jpg" id="details-modal__album-cover-image" class="details-modal__image" alt="Album Image"></a>
+                  <p>Álbum: <span id="details-modal__album"></span></p>
+                  <p>Grupo/Artista: <span id="details-modal__artist"></span></p>
+                  <p>Año: <span id="details-modal__year"></span></p>
+                  <p>Género: <span id="details-modal__genre"></span></p>
+                  <p>Subgénero: <span id="details-modal__subgenre"></span></p>
+                  <p>Playlist:</p> <div id="details-modal__spotifyPlaylist" class="details-modal__spotify-playlist"></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>     
     </div>
-  </div>
-
-<!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  
+    <!-- END Modal -->
+  
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="dataBase.js"></script>
   <script src="script.js"></script>
-  <!-- END Scripts -->
 </body>
 </html>
-
-
