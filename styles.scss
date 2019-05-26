@@ -1,12 +1,9 @@
 
 
 /* Variables */
-:root {
   $main-color:  rgb(19,33,37);
   $secondary-color: rgb(184, 189, 186);
   $red: rgb(255,0,0);
-
-}
 /* END Variables */
 
 /* Fonts */
@@ -21,6 +18,7 @@
 body {
   font-family: 'Karla-Regular';
   background-color: $main-color;
+  color: whitesmoke;
 }
 
 p {
@@ -36,7 +34,7 @@ p {
     width: 30em;
     height: 20em;  
     background: 
-    linear-gradient(to right, rgba(255, 255, 255, 0) 60%, $main-color),
+    // linear-gradient(to right, rgba(255, 255, 255, 0) 60%, $main-color),
     /* radial-gradient(farthest-corner at 10px 0, rgba(255, 255, 255, 0) 40%, var(--main-color) 68%) */
     url(niels-smeets-448642-unsplash.jpg);
     background-size: contain;
@@ -47,7 +45,7 @@ p {
      position: absolute;
     width: 100%;
     font-family: 'Lora-Regular';
-    color: $secondary-color;
+    // color: $secondary-color;
     text-align: center;
     margin-left: 8em;
 
@@ -55,6 +53,17 @@ p {
       font-size: 4em;
       margin-bottom: 0;
     }
+  }
+}
+
+.menu{
+
+  position: absolute;
+  top: 3%;
+  right: 20%;
+
+  &-div{
+    position: fixed;
   }
 }
 
@@ -110,6 +119,10 @@ p {
     }
   }
 }
+
+.modal-content{
+  color: black;
+}
 /* Common Classes */
 
 .flex{
@@ -154,5 +167,5 @@ p {
 }
 
 .all-albums-content {
-  background-image: linear-gradient($main-color 50%, yellow);
+  // background-image: linear-gradient($main-color 50%, yellow);
 }

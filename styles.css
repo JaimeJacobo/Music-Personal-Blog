@@ -1,10 +1,4 @@
 /* Variables */
-:root {
-  --main-color: rgb(19,33,37);
-  --secondary-color: rgb(184, 189, 186);
-  --red: rgb(255,0,0);
-}
-
 /* END Variables */
 /* Fonts */
 @font-face {
@@ -40,7 +34,8 @@
 /* END Fonts */
 body {
   font-family: 'Karla-Regular';
-  background-color: var(--main-color);
+  background-color: #132125;
+  color: whitesmoke;
 }
 
 p {
@@ -55,8 +50,7 @@ p {
 .header-image {
   width: 30em;
   height: 20em;
-  background: -webkit-gradient(linear, left top, right top, color-stop(60%, rgba(255, 255, 255, 0)), to(var(--main-color))), url(niels-smeets-448642-unsplash.jpg);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 60%, var(--main-color)), url(niels-smeets-448642-unsplash.jpg);
+  background: url(niels-smeets-448642-unsplash.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -65,7 +59,6 @@ p {
   position: absolute;
   width: 100%;
   font-family: 'Lora-Regular';
-  color: var(--secondary-color);
   text-align: center;
   margin-left: 8em;
 }
@@ -73,6 +66,16 @@ p {
 .header-title h1 {
   font-size: 4em;
   margin-bottom: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 3%;
+  right: 20%;
+}
+
+.menu-div {
+  position: fixed;
 }
 
 .weekly-top-ranking {
@@ -123,6 +126,10 @@ p {
   border-radius: 3px;
 }
 
+.modal-content {
+  color: black;
+}
+
 /* Common Classes */
 .flex-spaceBetween-center {
   display: -webkit-box;
@@ -166,14 +173,5 @@ p {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
-}
-
-.all-albums-content {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--main-color)), to(yellow));
-  background-image: linear-gradient(var(--main-color) 50%, yellow);
-}
-
-#1 {
-  width: 50000px;
 }
 /*# sourceMappingURL=styles.css.map */
