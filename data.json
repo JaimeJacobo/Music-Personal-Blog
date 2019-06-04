@@ -208,5 +208,19 @@
     "imageAlt": "La Raíz - El Lado de los Rebeldes",
     "albumLink" :"http://images.genius.com/3fa2297762f441cdabdd072202cadc6b.670x670x1.jpg",
     "spotifyPlaylist": "<iframe src=\"https://open.spotify.com/embed/album/1A6GckhdzwNsyvX5FwTpmI\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"
+  },
+  {
+    "position": "15",
+    "artist": "La Raíz",
+    "album": "Así en el Cielo como en la Selva",
+    "year": "2013",
+    "genre": "Rock",
+    "subgenre": "Ska, Reggae, Fusión, Rap",
+    "totalSongs": "11",
+    "totalDuration": "46min",
+    "albumCover": "LaRaiz-AsiEnLaSelvaComoEnLaSelva.jpg",
+    "imageAlt": "La Raíz - Así en el Cielo como en la Selva",
+    "albumLink" :"https://f4.bcbits.com/img/a0612250338_10.jpg",
+    "spotifyPlaylist": "<iframe src=\"https://open.spotify.com/embed/album/1XlifycvztveJY3gTkcspL\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"
   }
 ]

@@ -45,7 +45,7 @@ $(document).ready(function(){
       $.getJSON('data.json', (data)=>{
          $('#details-modal__complete-name').append(data[position].imageAlt);
          $('#details-modal__album-cover').attr('href', data[position].albumLink);
-         $('#details-modal__album-cover-image').attr('src', data[position].albumLink);
+         $('#details-modal__album-cover-image').attr('src', data[position].albumCover);
          $('#details-modal__album').append(data[position].album);
          $('#details-modal__artist').append(data[position].artist);
          $('#details-modal__year').append(data[position].year);
@@ -81,13 +81,11 @@ $(document).ready(function(){
 
    setTimeout(()=>{
    $('.each-album-button').click(()=>{
-      console.log('jaime')
       cleanModal();
       getModalInfo(event.target.id);
    });
 
       $('#4').click(()=>{
-         console.log('jaime')
       })
    }, 10);
 
