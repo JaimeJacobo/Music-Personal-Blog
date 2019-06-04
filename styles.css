@@ -42,15 +42,11 @@ p {
   margin-top: 1em;
 }
 
-.header {
-  background-color: #132125;
-  height: 20em;
-}
-
 .header-image {
   width: 30em;
   height: 20em;
-  background: url(niels-smeets-448642-unsplash.jpg);
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, rgba(255, 255, 255, 0)), to(#132125)), -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(255, 255, 255, 0)), to(#132125)), url(niels-smeets-448642-unsplash.jpg);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 60%, #132125), linear-gradient(rgba(255, 255, 255, 0) 10%, #132125), url(niels-smeets-448642-unsplash.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }

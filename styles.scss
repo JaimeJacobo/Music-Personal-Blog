@@ -27,15 +27,12 @@ p {
 
 .header {
 
-  background-color: rgb(19,33,37);
-  height: 20em;
-
   &-image{
     width: 30em;
     height: 20em;  
     background: 
-    // linear-gradient(to right, rgba(255, 255, 255, 0) 60%, $main-color),
-    /* radial-gradient(farthest-corner at 10px 0, rgba(255, 255, 255, 0) 40%, var(--main-color) 68%) */
+    linear-gradient(to right, rgba(255, 255, 255, 0) 60%, $main-color),
+    linear-gradient(rgba(255, 255, 255, 0) 10%, $main-color),
     url(niels-smeets-448642-unsplash.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -167,5 +164,5 @@ p {
 }
 
 .all-albums-content {
-  // background-image: linear-gradient($main-color 50%, yellow);
+  // background-image: linear-gradient(to right,  rgb(12,27,32)50%, rgb(17,32,36));
 }
