@@ -80,17 +80,12 @@ $(document).ready(function(){
 
 
    setTimeout(()=>{
-   $('.each-album-button').click(()=>{
-      cleanModal();
-      getModalInfo(event.target.id);
-   });
-
-      $('#4').click(()=>{
-      })
+      $('.each-album-button').click(()=>{
+         cleanModal();
+         getModalInfo(event.target.id);
+      });
    }, 10);
 
-
-   
 });
 
 
