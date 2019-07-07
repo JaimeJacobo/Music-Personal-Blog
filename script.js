@@ -1,3 +1,6 @@
+let albumsCounter = 18;
+let comparativeAlbumsCounter = 18;
+
 
 $(document).ready(function(){
 
@@ -11,24 +14,37 @@ $(document).ready(function(){
       });
    });
 
+
+
    $('#search').keyup(()=>{
-      $('#prueba').html('');
-         setTimeout(()=>{
-            $('.each-album-button').click(()=>{
-               cleanModal();
-               getModalInfo(event.target.id);
+            setTimeout(()=>{
+               $('.each-album-button').click(()=>{
+                  cleanModal();
+                  getModalInfo(event.target.id);
+               });
+            }, 10);
+         // $('#state').val('');
+         let searchField = $('#search').val();
+         let expression = new RegExp(searchField, "i");
+         $.getJSON('data.json', (data)=>{
+            $.each(data, (key, value)=>{
+               if (value.artist.search(expression) != -1 || value.album.search(expression) != -1){
+                  comparativeAlbumsCounter++;
+                  $('#prueba').append($('<button type="button" id="'+ value.position +'" class="each-album-button" data-toggle="modal" data-target="#details-modal"><img id="'+ value.position +'" src="'+ value.albumCover +'" alt="'+ value.imageAlt +'"></button>'));
+               };
             });
-         }, 10);
-      // $('#state').val('');
-      let searchField = $('#search').val();
-      let expression = new RegExp(searchField, "i");
-      $.getJSON('data.json', (data)=>{
-         $.each(data, (key, value)=>{
-            if (value.artist.search(expression) != -1 || value.album.search(expression) != -1){
-               $('#prueba').append($('<button type="button" id="'+ value.position +'" class="each-album-button" data-toggle="modal" data-target="#details-modal"><img id="'+ value.position +'" src="'+ value.albumCover +'" alt="'+ value.imageAlt +'"></button>'));
-            };
          });
-      });
+         setTimeout(()=>{
+            console.log('The before count: ' + albumsCounter)
+            console.log('Actual count: ' + comparativeAlbumsCounter)
+         },10)
+
+         if(albumsCounter !== comparativeAlbumsCounter){
+            $('#prueba').html('');
+         };
+         
+         albumsCounter = comparativeAlbumsCounter;     
+         comparativeAlbumsCounter = 0;    
    });
 
    let cleanModal = ()=> {
@@ -55,7 +71,7 @@ $(document).ready(function(){
       });
    };
 
-   //Instruction to stop the music from the Avantasia - Moonglow album
+   //Instruction to stop the music from the modal when it is closed
    $("#prueba2").on('hidden.bs.modal', ()=> {
       $("#prueba2 iframe").attr("src", $("#prueba2 iframe").attr("src"));
    });
@@ -85,6 +101,8 @@ $(document).ready(function(){
          getModalInfo(event.target.id);
       });
    }, 10);
+
+
 
 });
 

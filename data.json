@@ -236,5 +236,19 @@
     "imageAlt": "La Raíz - Entre Poetas y Presos",
     "albumLink" :"https://www.elquintobeatle.com/wp-content/uploads/2016/09/la-raiz-entre-poetas-y-presos-1.jpg",
     "spotifyPlaylist": "<iframe src=\"https://open.spotify.com/embed/album/0GB3w2P0EK3REk02nDLaue\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"
+  },
+  {
+    "position": "17",
+    "artist": "Sonata Arctica",
+    "album": "Pariah's Child",
+    "year": "2014",
+    "genre": "Metal",
+    "subgenre": "Power Metal, Symphonic Metal, Progressive Metal",
+    "totalSongs": "10",
+    "totalDuration": "53min",
+    "albumCover": "SonataArctica-PariahsChild.jpg",
+    "imageAlt": "Sonata Arctica - Pariah's Child",
+    "albumLink" :"https://images-na.ssl-images-amazon.com/images/I/81zkJR5EMJL._SL1417_.jpg",
+    "spotifyPlaylist": "<iframe src=\"https://open.spotify.com/embed/album/1UEP1e9xrhplViyPh6pETN\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"
   }
 ]
